@@ -50,7 +50,7 @@ function Transaction( uint  _idFlag,  uint _exCountry, uint _country) external p
     idFull[_idFlag].country=_country;
     countryCount[_country] +=1;
 
-    if (countryCount[_country] ==1000){
+    if (countryCount[_country] ==10000){
         currentState = State.Completed;
     }
 }
