@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,useState } from "react";
 import styles from "./metamask-auth.module.css";
 
 function isMobileDevice() {
