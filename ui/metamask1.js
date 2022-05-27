@@ -1,3 +1,5 @@
+//https://betterprogramming.pub/build-a-react-component-for-metamask-auth-10b7ecba5c3f
+//https://github.com/ilamanov/metamask-react-auth
 import React, { useEffect,useState } from "react";
 import styles from "./metamask-auth.module.css";
 
