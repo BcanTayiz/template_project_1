@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-
+import "./App.css";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -69,18 +68,32 @@ const App = () => {
   */
   return (
     <div className="App">
-      <div className="container">
-        <div className="header-container">
-          <p className="header gradient-text">My NFT Collection</p>
-          <p className="sub-text">
-            Each unique. Each beautiful. Discover your NFT today.
-          </p>
-          {currentAccount === "" ? (
+    <div className="container">
+    <div className="header-container">
+      <table>
+        <tr>
+          <td><p className="header gradient-text">NFT FLAG GAME | </p></td> 
+          <td> <p className="sub-text">
+            Your Pixel Your National Flag     <br></br>
+            Your National Flag Your Wealth 
+        </p>
+        </td>
+        <td><p className="header gradient-text">| </p></td> 
+          <td>| {currentAccount === "" ? (
             renderNotConnectedContainer()
           ) : (
-            <p> This are will be next </p>
-          )}
-        </div>
+            <button onClick={null} className="cta-button connect-wallet-button">
+              You are connected ! 
+            </button>
+          )}</td>
+        </tr>
+      </table>
+     
+        
+       
+        
+        
+      </div>
        
       </div>
     </div>
