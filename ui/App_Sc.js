@@ -1,4 +1,5 @@
-//Burada chian değiştirme kodunu da ekledik.
+//Burada chain değiştirme kodunu da ekledik.
+//Polygon ağına geçme talebi (57.satır)
 
 import React, { useEffect, useState } from "react";
 import "./App.css";
