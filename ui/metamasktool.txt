@@ -12,9 +12,43 @@ https://metamask.github.io/api-playground/api-documentation/
       params : [{chainId: '0x1'}],
     })
     
-//Diğerlerinde web3 import edilip aşağıdaki kod kullanılır. Polygon 137.
+//Diğerlerinde "import web3 from "web3";"  edilip aşağıdaki kod kullanılır. Polygon 137.
 
-    await window.ethereum.request({
-      method: 'wallet_switchEthereumChain',
-      params: [{ chainId: web3.utils.toHex(137) }]
-    });
+ const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+
+      /*
+      * Boom! This should print out public address once we authorize Metamask.
+      */
+      console.log("Connected", accounts[0]);
+      setCurrentAccount(accounts[0]); 
+    } catch (error) {
+      console.log(error)
+    }
+    
+    //Polygon ağına geçme talebi
+    const chainId = 137 // Polygon Mainnet
+
+if (window.ethereum.networkVersion !== chainId) {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: web3.utils.toHex(chainId) }]
+        });
+      } catch (err) {
+          // This error code indicates that the chain has not been added to MetaMask
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainName: 'Polygon Mainnet',
+                chainId: web3.utils.toHex(chainId),
+                nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
+                rpcUrls: ['https://polygon-rpc.com/']
+              }
+            ]
+          });
+        }
+      }
+    }
+    //Polygon ağına geçme talebi bitti
