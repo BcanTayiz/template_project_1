@@ -1,3 +1,4 @@
+https://metamask.github.io/api-playground/api-documentation/
 //Ethereum chainleri için hızlı bağlanma.
 0x1 	1 	Ethereum Main Network (Mainnet)
 0x3 	3 	Ropsten Test Network
