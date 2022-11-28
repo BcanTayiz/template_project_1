@@ -1,0 +1,61 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+:root {
+    --bg-color: rgba(150, 150, 150, 1);
+  
+    /* Border Colors are all transparent colors. These will tint or shade the background color of the square. */
+    --border-left-color: rgba(255, 255, 255, 0.20);
+    --border-top-color: rgba(255, 255, 255, 0.33);
+    --border-right-color: rgba(0, 0, 0, 0.15);
+    --border-bottom-color: rgba(0, 0, 0, 0.5);
+  
+    /* Square Colors:  background colors for the squares.*/
+    --color-0: #eaeaea;
+    --color-1: #ff6600;
+    --color-2: #eec900;
+    --color-3: #0000ff;
+    --color-4: #cc00ff;
+    --color-5: #00ff00;
+    --color-6: #66ccff;
+    --color-7: #ff0000;
+  
+    /* Button Colors */
+    --button-color-t: rgba(200, 200, 200, 1);
+    --button-color-r: rgba(150, 150, 150, 1);
+    --button-color-b: rgba(120, 120, 120, 1);
+    --button-color-l: rgba(222, 222, 222, 1);
+  
+    /* Numbers define values that will be used throughout the CSS.
+    --tile-size: 20px for example will set size of the grid squares. */
+    --cols: 50;
+    --rows: 50;
+    --tile-size: 20px;
+    --border-width: 5px;
+  }
+
+  .grid-board {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--tile-size));
+    grid-gap: 0;
+    align-self: flex-start;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+
+.grid-main{
+    background-color: azure;
+    height: 150vh;
+    width: 80vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid bisque;
+    border-radius: 20px;
+    margin-left: 10px;
+}

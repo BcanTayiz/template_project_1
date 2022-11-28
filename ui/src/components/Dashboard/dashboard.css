@@ -1,0 +1,61 @@
+
+.dashboard{
+    background-color: azure;
+    height: 150vh;
+    width: 15vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid bisque;
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+h2{
+    font-size: 20px !important;
+
+}
+
+
+.dashboard header{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid black;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.dashboard header h2{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.dashboard .main-section section h2{
+    border: 2px solid green;
+    border-radius: 2em;
+    margin: 10px
+}
+
+.dashboard .main-section section h2:hover{
+    color: red;
+    background-color: rgb(166, 233, 233);
+    transition: color ease 0.5s, background-color ease 0.5s;
+    cursor: pointer;
+}
+
+.dropdown{
+    border-radius: 2em;
+}
+
+.dashboard-values{
+    background-color: burlywood;
+    border: 2px solid blanchedalmond;
+    font-weight: 800;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgb(151, 71, 71);
+}

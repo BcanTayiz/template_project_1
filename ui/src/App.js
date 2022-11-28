@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
+import Dashboard from "./components/Dashboard/Dashboard";
+import GridTemplate from "./components/GridTemplate/GridTemplate";
+import Footer from "./components/Footer/Footer";
+
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   
@@ -89,13 +93,27 @@ const App = () => {
         </tr>
       </table>
      
-        
+        {/* Grid Template'in ve Dashboardun olduğu alan. Burayı main olarak aldım, index.css içinde değiştirmeye aldım*/}
+       <main className="main-field">
+         <section className='grid-component'>
+          <GridTemplate  />
+         </section>
+        <section className='dashboard-component'>
+          <Dashboard  />        
+        </section>
+         
+       </main>
+
        
         
         
       </div>
        
       </div>
+
+      <footer>
+        <Footer />
+       </footer>
     </div>
   );
 };
